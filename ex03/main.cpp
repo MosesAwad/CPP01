@@ -65,6 +65,9 @@ int main()
 		jones.attack();
 		club.setType("some other type of club");
 		jones.attack();
+		club.setType("Elite spiked club");
+		jones.setWeapon(club);
+		jones.attack();
 	}
 	return (0);
 }

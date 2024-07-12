@@ -3,32 +3,36 @@
 
 void	Harl::debug( void )
 {
+	std::cout << "[ DEBUG ]" << std::endl;
 	std::cout <<
 		"I love having extra bacon for my 7XL-double-cheese-triple"
-		"-pickle-specialketchup burger. I really do!"
+		"-pickle-specialketchup burger. I really do!\n"
 		<< std::endl;
 }
 
 void	Harl::info( void )
 {
+	std::cout << "[ INFO ]" << std::endl;
 	std::cout <<
 		"I cannot believe adding extra bacon costs more money. You didn’t put"
-		" enough bacon in my burger! If you did, I wouldn’t be asking for more!"
+		" enough bacon in my burger! If you did, I wouldn’t be asking for more!\n"
 		<< std::endl;
 }
 
 void	Harl::warning( void )
 {
+	std::cout << "[ WARNING ]" << std::endl;
 	std::cout <<
 		"I think I deserve to have some extra bacon for free. I’ve been coming"
-		" for years whereas you started working here since last month."
+		" for years whereas you started working here since last month.\n"
 		<< std::endl;
 }
 
 void	Harl::error( void )
 {
+	std::cout << "[ ERROR ]" << std::endl;
 	std::cout <<
-		"This is unacceptable! I want to speak to the manager now."
+		"This is unacceptable! I want to speak to the manager now.\n"
 		<< std::endl;
 }
 
@@ -54,21 +58,22 @@ void	Harl::complain( std::string level )
 	switch(level_index)
 	{
 		case 0:
-			std::cout << "[ DEBUG ]" << std::endl;
 			this->debug();
-			std::cout << "\n";
-		case 1:
-			std::cout << "[ INFO ]" << std::endl;
 			this->info();
-			std::cout << "\n";
-		case 2:
-			std::cout << "[ WARNING ]" << std::endl;
 			this->warning();
-			std::cout << "\n";
-		case 3:
-			std::cout << "[ ERROR ]" << std::endl;
 			this->error();
-			std::cout << "\n";
+			break ;
+		case 1:
+			this->info();
+			this->warning();
+			this->error();
+			break ;
+		case 2:
+			this->warning();
+			this->error();
+			break ;
+		case 3:
+			this->error();
 			break;
 		default:
 			std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;

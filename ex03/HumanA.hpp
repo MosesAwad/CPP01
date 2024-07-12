@@ -7,7 +7,7 @@
 /*
 	You have to pass a reference to a weapon because otherwise,
 	you would have to create/initialize the weapon directly from
-	within the class and since it's private, more specifically
+	within the class since it's private, more specifically
 	via a setter function. But since the subject pdf states this:
 
 	int main()
@@ -28,7 +28,6 @@
 	passed by reference to the class, that is why we can do club.setType(
 	"some other type of club") from outside the HumanA class and the
 	change would still be reflected in the HumanA class.
-	)
 */
 
 class HumanA

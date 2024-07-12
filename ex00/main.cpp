@@ -16,5 +16,8 @@ int main()
 	std::cout << "---Another Stack Zombie---" << std::endl;
 	randomChump("Dimitrescu");
 
+	std::cout << "Proof that Dimitrescu got deleted at the end of the"
+					"randomChump function" << std::endl;
+
 	delete(zombie2);
 }
